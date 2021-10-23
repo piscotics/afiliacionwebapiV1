@@ -1,0 +1,80 @@
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/appsettings.Development.json
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/appsettings.json
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.deps.json
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.runtimeconfig.json
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.runtimeconfig.dev.json
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/ref/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.pdb
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/FirebirdSql.Data.FirebirdClient.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/FirebirdSql.EntityFrameworkCore.Firebird.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Microsoft.OpenApi.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/bin/Release/net5.0/System.Diagnostics.DiagnosticSource.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.csproj.AssemblyReference.cache
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.GeneratedMSBuildEditorConfig.editorconfig
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.AssemblyInfoInputs.cache
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.AssemblyInfo.cs
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.csproj.CoreCompileInputs.cache
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.MvcApplicationPartsAssemblyInfo.cs
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.MvcApplicationPartsAssemblyInfo.cache
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/staticwebassets/afiliacionwebapi.StaticWebAssets.Manifest.cache
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/staticwebassets/afiliacionwebapi.StaticWebAssets.xml
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/scopedcss/bundle/afiliacionwebapi.styles.css
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.RazorTargetAssemblyInfo.cache
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.csproj.CopyComplete
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/ref/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.pdb
+/media/devfko/Documentos/Proyectos/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.genruntimeconfig.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/appsettings.Development.json
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/appsettings.json
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.deps.json
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.runtimeconfig.json
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.runtimeconfig.dev.json
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/ref/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/afiliacionwebapi.pdb
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/FirebirdSql.Data.FirebirdClient.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/FirebirdSql.EntityFrameworkCore.Firebird.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/System.Web.Cors.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/System.Net.Http.Formatting.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/System.Web.Http.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/System.Web.Http.Cors.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Microsoft.OpenApi.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Newtonsoft.Json.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Newtonsoft.Json.Bson.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/bin/Release/net5.0/System.Diagnostics.DiagnosticSource.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.csproj.AssemblyReference.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.GeneratedMSBuildEditorConfig.editorconfig
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.AssemblyInfoInputs.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.AssemblyInfo.cs
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.csproj.CoreCompileInputs.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.MvcApplicationPartsAssemblyInfo.cs
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.MvcApplicationPartsAssemblyInfo.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/staticwebassets/afiliacionwebapi.StaticWebAssets.Manifest.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/staticwebassets/afiliacionwebapi.StaticWebAssets.xml
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/scopedcss/bundle/afiliacionwebapi.styles.css
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.RazorTargetAssemblyInfo.cache
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.csproj.CopyComplete
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/ref/afiliacionwebapi.dll
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.pdb
+/media/devfko/Documentos/Proyectos/Pisco Company/afiliacionwebapi/obj/Release/net5.0/afiliacionwebapi.genruntimeconfig.cache
