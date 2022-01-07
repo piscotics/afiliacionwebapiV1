@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AlexanderMauricioEsc\\Downloads\\PiscoCodes\\afiliacionwebapi\\afiliacionwebapi.csproj": {}
+    "C:\\PiscoCodes\\afiliacionwebapipisco\\afiliacionwebapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AlexanderMauricioEsc\\Downloads\\PiscoCodes\\afiliacionwebapi\\afiliacionwebapi.csproj": {
+    "C:\\PiscoCodes\\afiliacionwebapipisco\\afiliacionwebapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AlexanderMauricioEsc\\Downloads\\PiscoCodes\\afiliacionwebapi\\afiliacionwebapi.csproj",
+        "projectUniqueName": "C:\\PiscoCodes\\afiliacionwebapipisco\\afiliacionwebapi.csproj",
         "projectName": "afiliacionwebapi",
-        "projectPath": "C:\\Users\\AlexanderMauricioEsc\\Downloads\\PiscoCodes\\afiliacionwebapi\\afiliacionwebapi.csproj",
+        "projectPath": "C:\\PiscoCodes\\afiliacionwebapipisco\\afiliacionwebapi.csproj",
         "packagesPath": "C:\\Users\\AlexanderMauricioEsc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AlexanderMauricioEsc\\Downloads\\PiscoCodes\\afiliacionwebapi\\obj\\",
+        "outputPath": "C:\\PiscoCodes\\afiliacionwebapipisco\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AlexanderMauricioEsc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

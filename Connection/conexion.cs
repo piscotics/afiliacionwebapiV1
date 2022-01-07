@@ -28,7 +28,7 @@ namespace afiliacionwebapi.Connection
         public FbConnection ConexionDB()
         {
             // Prueba Remoto AWS
-            FbConnection cn = new FbConnection("User=SYSDBA;password=masterkey;DataSource=localhost;Database=localhost:C:\\Users\\AlexanderMauricioEsc\\Downloads\\PiscoCodes\\Bases\\PASARELAWEB.FDB;Charset=NONE;Dialect=3;Max Pool Size=1024;");
+            FbConnection cn = new FbConnection("User=SYSDBA;password=masterkey;DataSource=localhost;Database=localhost:C:\\PiscoCodes\\Bases\\PASARELAWEB.FDB;Charset=NONE;Dialect=3;Max Pool Size=1024;");
 
             return cn;
         }

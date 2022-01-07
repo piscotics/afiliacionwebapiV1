@@ -15,6 +15,7 @@ namespace afiliacionwebapi.Controllers
     [Route("api/contract")]
     public class ContratoController : Controller
     {
+     
         [HttpPost]
         [Route("create")]
         public IActionResult create(Contrato contrato)

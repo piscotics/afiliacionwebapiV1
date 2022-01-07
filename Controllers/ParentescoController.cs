@@ -26,6 +26,40 @@ namespace afiliacionwebapi.Controllers
             return Ok(parentescoRequest.list(subdominio));
         }
 
+        [HttpPost]
+        [Route("create")]
+        public IActionResult create(Parentesco parentesco)
+        {
+            if (parentesco == null) return BadRequest();
+
+            ParentescoRequest parentescoRequest = new ParentescoRequest();
+            Parentesco resultado = new Parentesco();
+
+            resultado = parentescoRequest.create(parentesco);
+
+            if (resultado == null || resultado.codRespuesta == "401") return Unauthorized();
+            if (resultado.codRespuesta == "404") return BadRequest(resultado.msjRespuesta);
+
+            return Ok(resultado);
+        }
+
+        [HttpPut]
+        [Route("update")]
+        public IActionResult update(Parentesco parentesco)
+        {
+            if (parentesco == null) return BadRequest();
+
+            ParentescoRequest parentescoRequest = new ParentescoRequest();
+            Parentesco resultado = new Parentesco();
+
+            resultado = parentescoRequest.update(parentesco);
+
+            if (resultado == null || resultado.codRespuesta == "401") return Unauthorized();
+            if (resultado.codRespuesta == "404") return BadRequest(resultado.msjRespuesta);
+
+            return Ok(resultado);
+        }
+
         [HttpGet]
         [Route("get")]
         public IActionResult get([FromQuery] string idParentesco, string subdominio)

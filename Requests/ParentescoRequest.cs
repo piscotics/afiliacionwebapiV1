@@ -9,6 +9,18 @@ namespace afiliacionwebapi.Models
 {
     public class ParentescoRequest : Parentesco
     {
+        public Parentesco create(Parentesco parentesco)
+        {
+            ParentescoService parentescoService = new ParentescoService();
+            return parentescoService.create(parentesco);
+        }
+
+        public Parentesco update(Parentesco parentesco)
+        {
+            ParentescoService parentescoService = new ParentescoService();
+            return parentescoService.update(parentesco);
+        }
+
 
         public List<Parentesco> list(string subdominio)
         {

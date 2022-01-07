@@ -7,18 +7,29 @@ namespace afiliacionwebapi.Models
 {
     public class Beneficiario
     {
+        public string id { get; set; } // Utilizado para el ID original del beneficiario, en caso de ser modificado
         public string identificacion { get; set; }
+        public Titular identificaciontitular { get; set; }
         public string nombre1 { get; set; }
         public string nombre2 { get; set; }
         public string apellido1 { get; set; }
         public string apellido2 { get; set; }
-        public Parentesco idParentesco { get; set; }
-        public DateTime fechaAfiliacion { get; set; }
+        public string telefono { get; set; }
+        public string celular { get; set; }
+        public DateTime? fechaNacimiento { get; set; }
         public string genero { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public int edadAfiliacion { get; set; }
-        public DateTime fechaCobertura { get; set; }
+        public DateTime? fechaCobertura { get; set; }
+        public DateTime? fechaAfiliacion { get; set; }
         public string observaciones { get; set; }
+        public int edadAfiliacion { get; set; }
+        public Parentesco idParentesco { get; set; }
         public int adicional { get; set; }
+        public int fallecido { get; set; }
+        public int retirado { get; set; }
+        public DateTime? fechafallecido { get; set; }
+        public DateTime? fecharetirado { get; set; }
+        public string codRespuesta { get; set; }
+        public string msjRespuesta { get; set; }
+        public string subdominio { get; set; }
     }
 }
