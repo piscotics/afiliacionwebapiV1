@@ -9,6 +9,15 @@ namespace afiliacionwebapi.Models
 {
     public class BeneficiarioRequest : Beneficiario
     {
+
+         public List<Beneficiario> list(string subdominio, string identificaciontitular, string idcontrato)
+        {
+           BeneficiarioService beneficiarioService = new BeneficiarioService();
+            List<Beneficiario> beneficiario = new List<Beneficiario>();
+            beneficiario = beneficiarioService.list(subdominio,identificaciontitular,idcontrato);
+            return beneficiario;
+        }
+
         public Beneficiario get(string subdominio, string identificacion)
         {
             BeneficiarioService BeneficiarioService = new BeneficiarioService();

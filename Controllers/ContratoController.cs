@@ -52,19 +52,30 @@ namespace afiliacionwebapi.Controllers
 
         [HttpGet]
         [Route("get")]
-        public IActionResult get([FromQuery] string idContrato, string subdominio)
+        public IActionResult get([FromQuery] string idContrato, string tipoBusqueda, string subdominio)
         {
             if (idContrato == "" || subdominio == "") return BadRequest();
 
             ContratoRequest contratoRequest = new ContratoRequest();
             Contrato resultado = new Contrato();
 
-            resultado = contratoRequest.get(subdominio, idContrato);
+            resultado = contratoRequest.get(subdominio, idContrato,tipoBusqueda);
 
             if (resultado == null || resultado.codRespuesta == "401") return Unauthorized();
             if (resultado.codRespuesta == "404") return BadRequest(resultado.msjRespuesta);
 
             return Ok(resultado);
+        }
+
+        
+        [HttpGet]
+        [Route("list")]
+        public IActionResult list([FromQuery] string criterio, string tipoBusqueda, string subdominio)
+        {
+            if (subdominio == "") return BadRequest();
+
+            ContratoRequest contratoRequest = new ContratoRequest();
+            return Ok(contratoRequest.list(subdominio,criterio,tipoBusqueda));
         }
     }
 }

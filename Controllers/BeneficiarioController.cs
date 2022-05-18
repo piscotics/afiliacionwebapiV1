@@ -15,6 +15,15 @@ namespace afiliacionwebapi.Controllers
     [Route("api/benefi")]
     public class BeneficiarioController : Controller
     {
+        [HttpGet]
+        [Route("list")]
+        public IActionResult listaParentesco([FromQuery] string subdominio, string identificaciontitular, string idcontrato)
+        {
+            if (subdominio == "") return BadRequest();
+
+            BeneficiarioRequest BeneficiarioRequest = new BeneficiarioRequest();
+            return Ok(BeneficiarioRequest.list(subdominio, identificaciontitular,  idcontrato));
+        }
         
         [HttpGet]
         [Route("get")]

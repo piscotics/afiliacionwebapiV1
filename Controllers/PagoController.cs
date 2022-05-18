@@ -12,20 +12,30 @@ using Microsoft.EntityFrameworkCore;
 namespace afiliacionwebapi.Controllers
 {
     [ApiController]
-    [Route("api/benefi")]
+    [Route("api/payment")]
     public class PagoController : Controller
     {
-        
-       /* [HttpGet]
-        [Route("get")]
-        public IActionResult get([FromQuery] string identificacion, string subdominio)
-        {
-            if (identificacion == "" || subdominio == "") return BadRequest();
 
-            PagoRequest PagoRequest = new PagoRequest();
+        [HttpGet]
+        [Route("list")]
+        public IActionResult listaPagos([FromQuery] string subdominio, string identificacion, string idcontrato)
+        {
+            if (subdominio == "") return BadRequest();
+
+            PagoRequest pagoRequest = new PagoRequest();
+            return Ok(pagoRequest.list(subdominio, identificacion,  idcontrato));
+        }
+        
+        [HttpGet]
+        [Route("get")]
+        public IActionResult get([FromQuery] string NRORECIBO, string subdominio)
+        {
+            if (NRORECIBO == "" || subdominio == "") return BadRequest();
+
+            PagoRequest pagoRequest = new PagoRequest();
             Pago resultado = new Pago();
 
-            resultado = PagoRequest.get(subdominio, identificacion);
+            resultado = pagoRequest.get(subdominio, NRORECIBO);
 
             if (resultado == null || resultado.codRespuesta == "401") return Unauthorized();
             if (resultado.codRespuesta == "404") return BadRequest(resultado.msjRespuesta);
@@ -39,10 +49,10 @@ namespace afiliacionwebapi.Controllers
         {
             if (Pago == null) return BadRequest();
 
-            PagoRequest PagoRequest = new PagoRequest();
+            PagoRequest pagoRequest = new PagoRequest();
             Pago resultado = new Pago();
 
-            resultado = PagoRequest.update(Pago);
+            resultado = pagoRequest.update(Pago);
 
             if (resultado == null || resultado.codRespuesta == "401") return Unauthorized();
             if (resultado.codRespuesta == "404") return BadRequest(resultado.msjRespuesta);
@@ -56,16 +66,16 @@ namespace afiliacionwebapi.Controllers
         {
             if (Pago == null) return BadRequest();
 
-            PagoRequest PagoRequest = new PagoRequest();
+            PagoRequest pagoRequest = new PagoRequest();
             Pago resultado = new Pago();
 
-            resultado = PagoRequest.create(Pago);
+            resultado = pagoRequest.create(Pago);
 
             if (resultado == null || resultado.codRespuesta == "401") return Unauthorized();
             if (resultado.codRespuesta == "404") return BadRequest(resultado.msjRespuesta);
 
             return Ok(resultado);
-        }*/
+        }
 
     }
 }

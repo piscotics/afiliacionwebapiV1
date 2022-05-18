@@ -20,6 +20,7 @@ namespace afiliacionwebapi.Models
         public string bannerSuperior { get; set; }
         public string bannerInferior { get; set; }
         public int erp { get; set; }
+        public string modpago { get; set; }
         public string codRespuesta { get; set; }
         public string msjRespuesta { get; set; }
         public string subdominio { get; set; }

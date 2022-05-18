@@ -21,12 +21,20 @@ namespace afiliacionwebapi.Models
             return contratoService.update(contrato);
         }
 
-        public Contrato get(string subdominio, string idContrato)
+        public Contrato get(string subdominio, string idContrato, string tipoBusqueda)
         {
             ContratoService contratoService = new ContratoService();
             Contrato contrato = new Contrato();
-            contrato = contratoService.get(subdominio, idContrato);
+            contrato = contratoService.get(subdominio, idContrato,tipoBusqueda);
             return contrato;
+        }
+
+        public List<Contrato> list(string subdominio, string criterio, string tipoBusqueda)
+        {
+            ContratoService contratoService = new ContratoService();
+            List<Contrato> contratos = new List<Contrato>();
+            contratos = contratoService.list(subdominio, criterio,tipoBusqueda);
+            return contratos;
         }
 
     }

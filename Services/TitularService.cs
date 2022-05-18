@@ -154,9 +154,9 @@ namespace afiliacionwebapi.Services
                     cmdFB.Parameters.AddWithValue("CELULAR1", SqlDbType.VarChar).Value = titular.celular1;
                     cmdFB.Parameters.AddWithValue("CELULAR2", SqlDbType.VarChar).Value = titular.celular2;
                     cmdFB.Parameters.AddWithValue("EMAIL", SqlDbType.VarChar).Value = titular.email.ToLower();
-                    cmdFB.Parameters.AddWithValue("FECHANACIMIENTO", SqlDbType.VarChar).Value = titular.fechaNacimiento;
+                    cmdFB.Parameters.AddWithValue("FECHANACIMIENTO", SqlDbType.DateTime).Value = titular.fechaNacimiento;
                     cmdFB.Parameters.AddWithValue("GENERO", SqlDbType.VarChar).Value = titular.genero;
-                    cmdFB.Parameters.AddWithValue("FECHACOBERTURA", SqlDbType.VarChar).Value = titular.fechaCobertura;
+                    cmdFB.Parameters.AddWithValue("FECHACOBERTURA", SqlDbType.DateTime).Value = titular.fechaCobertura;
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 
@@ -216,9 +216,9 @@ namespace afiliacionwebapi.Services
                     cmdFB.Parameters.AddWithValue("CELULAR1", SqlDbType.VarChar).Value = titular.celular1;
                     cmdFB.Parameters.AddWithValue("CELULAR2", SqlDbType.VarChar).Value = titular.celular2;
                     cmdFB.Parameters.AddWithValue("EMAIL", SqlDbType.VarChar).Value = titular.email.ToLower();
-                    cmdFB.Parameters.AddWithValue("FECHANACIMIENTO", SqlDbType.Date).Value = titular.fechaNacimiento;
+                    cmdFB.Parameters.AddWithValue("FECHANACIMIENTO", SqlDbType.DateTime).Value = titular.fechaNacimiento;
                     cmdFB.Parameters.AddWithValue("GENERO", SqlDbType.VarChar).Value = titular.genero;
-                    cmdFB.Parameters.AddWithValue("FECHACOBERTURA", SqlDbType.Date).Value = titular.fechaCobertura;
+                    cmdFB.Parameters.AddWithValue("FECHACOBERTURA", SqlDbType.DateTime).Value = titular.fechaCobertura;
                     cmdFB.Parameters.AddWithValue("FECHAAFILIACION", SqlDbType.Date).Value = titular.fechaAfiliacion;
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();

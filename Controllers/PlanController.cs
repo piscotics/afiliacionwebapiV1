@@ -75,5 +75,7 @@ namespace afiliacionwebapi.Controllers
 
             return Ok(resultado);
         }
+
+        
     }
 }

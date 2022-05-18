@@ -24,6 +24,16 @@ namespace afiliacionwebapi.Models
         public Empleado vendedor { get; set; }
         public string direccionCobro { get; set; }
         public string observaciones { get; set; }
+        public Empresas empresas { get; set; }
+        public DateTime?  fechaUltimoPago { get; set; }
+        public DateTime?  pagoHasta { get; set; }
+
+        public string identificacion { get; set; }
+        public string nombre1 { get; set; }
+        public string nombre2 { get; set; }
+        public string apellido1 { get; set; }
+        public string apellido2 { get; set; }
+
         public string codRespuesta { get; set; }
         public string msjRespuesta { get; set; }
         public string subdominio { get; set; }

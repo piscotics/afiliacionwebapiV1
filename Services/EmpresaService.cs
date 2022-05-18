@@ -41,6 +41,8 @@ namespace afiliacionwebapi.Services
                     cmdFB.Parameters.AddWithValue("MULTIAFILIACION", SqlDbType.Int).Value = empresa.multiAfiliacion;
                     cmdFB.Parameters.AddWithValue("BANNERSUPERIOR", SqlDbType.VarChar).Value = empresa.bannerSuperior.ToLower();
                     cmdFB.Parameters.AddWithValue("BANNERINFERIOR", SqlDbType.VarChar).Value = empresa.bannerInferior.ToLower();
+                    cmdFB.Parameters.AddWithValue("modpago", SqlDbType.VarChar).Value = empresa.modpago;
+
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 
@@ -105,6 +107,7 @@ namespace afiliacionwebapi.Services
                         infoEmpresa.bannerSuperior = dbDR.GetString(7);
                         infoEmpresa.bannerInferior = dbDR.GetString(8);
                         infoEmpresa.erp = dbDR.GetInt16(9);
+                        infoEmpresa.modpago =  dbDR.GetString(10);
                     }
                 }
                 catch (Exception ex)

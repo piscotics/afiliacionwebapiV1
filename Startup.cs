@@ -56,10 +56,16 @@ namespace afiliacionwebapi
             }
 
             app.UseCors(builder =>  {
-                builder
+                
+                 builder
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader();
+                .AllowAnyHeader()
+                ;
+                
+               
+                
+                
             });
 
             app.UseRouting();
