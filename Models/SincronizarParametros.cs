@@ -5,11 +5,11 @@ using System.Web;
 
 namespace afiliacionwebapi.Models
 {
-    public class Novedad
+    public class SincronizarParametros
     {
-        public Int32 idNovedad{ get; set; }
-        public Int32 codigo { get; set; }
-        public string novedad { get; set; }
+        public Int32 Codigo { get; set; }
+        public string Resultado { get; set; }
+       
         public string codRespuesta { get; set; }
         public string msjRespuesta { get; set; }
         public string subdominio { get; set; }

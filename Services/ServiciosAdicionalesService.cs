@@ -9,14 +9,14 @@ using System.Web;
 
 namespace afiliacionwebapi.Services
 {
-    public class NovedadService
+    public class ServiciosAdicionalesService
     {
 
         string rutaDBWeb = "";
-
-        public Novedad get(string subdominio, string idNovedad)
+        
+        public ServiciosAdicionales get(string subdominio, string idServiciosAdicionales)
         {
-            Novedad infoNovedad = new Novedad();
+            ServiciosAdicionales infoServiciosAdicionales = new ServiciosAdicionales();
 
             // Siempre entramos a verificar que el subdominio enviado exista
             rutaDBWeb = PasarelaWebService.validarSubdominio(subdominio);
@@ -28,25 +28,34 @@ namespace afiliacionwebapi.Services
 
                 try
                 {
+
                     cnConnFB = Connection.Conexion.getInstance().ConexionDBWeb(rutaDBWeb);
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
-                    cmdFB.CommandText = " P_AW_GETNOVEDAD ";
-                    cmdFB.Parameters.AddWithValue("ID", SqlDbType.Int).Value = idNovedad;
+                    cmdFB.CommandText = " P_AW_GETSERVICIOSADICIONALES ";
+                    cmdFB.Parameters.AddWithValue("ID", SqlDbType.Int).Value = idServiciosAdicionales;
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 
                     foreach (DbDataRecord dbDR in drFB)
                     {
-                        infoNovedad.idNovedad = dbDR.GetInt32(0);
-                        infoNovedad.codigo = dbDR.GetInt32(1);
-                        infoNovedad.novedad = dbDR.GetString(2);
+                        infoServiciosAdicionales.idsa = dbDR.GetInt32(0);
+                        infoServiciosAdicionales.descripcion = dbDR.GetString(1);
+                        infoServiciosAdicionales.estado = dbDR.GetString(2);
+                        infoServiciosAdicionales.valor = dbDR.GetFloat(3);
+                        infoServiciosAdicionales.tipocobro = dbDR.GetInt16(4);
+                        infoServiciosAdicionales.planproteccion = dbDR.GetString(5);
+                        infoServiciosAdicionales.parentesco = dbDR.GetString(6);
+                        infoServiciosAdicionales.usuario = dbDR.GetString(7);
+                        infoServiciosAdicionales.valorpoliza = dbDR.GetFloat(8);
+                        infoServiciosAdicionales.seguro = dbDR.GetInt16(9);
+                        infoServiciosAdicionales.tipo = dbDR.GetString(10);
                        
                     }
                 }
                 catch (Exception ex)
                 {
-                    infoNovedad = null;
+                    infoServiciosAdicionales = null;
                     Console.WriteLine(ex.Message);
                 }
                 finally
@@ -61,12 +70,12 @@ namespace afiliacionwebapi.Services
                     }
                 }
             }
-            return infoNovedad;
+            return infoServiciosAdicionales;
         }
 
-        public List<Novedad> list(string subdominio)
+        public List<ServiciosAdicionales> list(string subdominio)
         {
-            List<Novedad> lstNovedad = new List<Novedad>();
+            List<ServiciosAdicionales> lstServiciosAdicionales = new List<ServiciosAdicionales>();
 
             // Siempre entramos a verificar que el subdominio enviado exista
             rutaDBWeb = PasarelaWebService.validarSubdominio(subdominio);
@@ -81,22 +90,30 @@ namespace afiliacionwebapi.Services
                     cnConnFB = Connection.Conexion.getInstance().ConexionDBWeb(rutaDBWeb);
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
-                    cmdFB.CommandText = " P_AW_LISTNOVEDAD ";
+                    cmdFB.CommandText = " P_AW_LISTSERVICIOSADICIONALES ";
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 
                     foreach (DbDataRecord dbDR in drFB)
                     {
-                        Novedad caja = new Novedad();
-                        caja.idNovedad = dbDR.GetInt32(0);
-                        caja.codigo = dbDR.GetInt32(1);
-                        caja.novedad = dbDR.GetString(2);
-                        lstNovedad.Add(caja);
+                        ServiciosAdicionales serviciosAdicionales = new ServiciosAdicionales();
+                        serviciosAdicionales.idsa = dbDR.GetInt32(0);
+                        serviciosAdicionales.descripcion = dbDR.GetString(1);
+                        serviciosAdicionales.estado = dbDR.GetString(2);
+                        serviciosAdicionales.valor = dbDR.GetFloat(3);
+                        serviciosAdicionales.tipocobro = dbDR.GetInt16(4);
+                        serviciosAdicionales.planproteccion = dbDR.GetString(5);
+                        serviciosAdicionales.parentesco = dbDR.GetString(6);
+                        serviciosAdicionales.usuario = dbDR.GetString(7);
+                        serviciosAdicionales.valorpoliza = dbDR.GetFloat(8);
+                        serviciosAdicionales.seguro = dbDR.GetInt16(9);
+                        serviciosAdicionales.tipo = dbDR.GetString(10);
+                        lstServiciosAdicionales.Add(serviciosAdicionales);
                     }
                 }
                 catch (Exception ex)
                 {
-                    lstNovedad = null;
+                    lstServiciosAdicionales = null;
                     Console.WriteLine(ex.Message);
                 }
                 finally
@@ -111,7 +128,7 @@ namespace afiliacionwebapi.Services
                     }
                 }
             }
-            return lstNovedad;
+            return lstServiciosAdicionales;
         }
 
     }

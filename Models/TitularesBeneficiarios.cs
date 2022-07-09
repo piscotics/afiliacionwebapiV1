@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace afiliacionwebapi.Models
+{
+    public class TitularesBeneficiarios
+    {
+        public string identificacion { get; set; }
+        public string nombre1 { get; set; }
+        public string nombre2 { get; set; }
+        public string apellido1 { get; set; }
+        public string apellido2 { get; set; }
+        
+        public string codRespuesta { get; set; }
+        public string msjRespuesta { get; set; }
+        public string subdominio { get; set; }
+    }
+}

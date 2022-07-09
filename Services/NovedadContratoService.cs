@@ -94,7 +94,7 @@ namespace afiliacionwebapi.Services
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
                     cmdFB.CommandText = " P_AW_UPDATENOVEDADCONTRATO ";
-                    cmdFB.Parameters.AddWithValue("IDNOVEDADCONTRATO", SqlDbType.Int).Value = NovedadContrato.idNovedadContrato;
+                    cmdFB.Parameters.AddWithValue("ID", SqlDbType.Int).Value = NovedadContrato.idNovedadContrato;
                     cmdFB.Parameters.AddWithValue("IDNOVEDAD", SqlDbType.Int).Value = NovedadContrato.idNovedad;
                     cmdFB.Parameters.AddWithValue("IDCONTRATO", SqlDbType.VarChar).Value = NovedadContrato.idContrato;
                     cmdFB.Parameters.AddWithValue("FECHANOVEDAD", SqlDbType.DateTime).Value = NovedadContrato.fechanovedad ;
@@ -169,8 +169,8 @@ namespace afiliacionwebapi.Services
                         infoNovedadContrato.idNovedad = dbDR.GetInt32(1);
                         infoNovedadContrato.idContrato = dbDR.GetString(2);
                         infoNovedadContrato.fechanovedad = dbDR.GetDateTime(3);
-                        infoNovedadContrato.postfechadodia = dbDR.GetInt32(4);
-                        infoNovedadContrato.aplicada = dbDR.GetInt32(5);
+                        infoNovedadContrato.postfechadodia = dbDR.GetInt16(4);
+                        infoNovedadContrato.aplicada = dbDR.GetInt16(5);
                         infoNovedadContrato.fechan = dbDR.GetDateTime(6);
                         infoNovedadContrato.usuario = dbDR.GetString(7);
                         infoNovedadContrato.idcobrador = dbDR.GetString(8);
@@ -181,7 +181,7 @@ namespace afiliacionwebapi.Services
                         infoNovedadContrato.posiciony = dbDR.GetString(13);
                         infoNovedadContrato.titular = dbDR.GetString(14);
                         infoNovedadContrato.observaciones = dbDR.GetString(15);
-                        infoNovedadContrato.idalterna = dbDR.GetInt32(16);
+                        infoNovedadContrato.idalterna = dbDR.GetInt16(16);
                        
                     }
                 }
@@ -205,7 +205,7 @@ namespace afiliacionwebapi.Services
             return infoNovedadContrato;
         }
 
-        public List<NovedadContrato> list(string subdominio)
+        public List<NovedadContrato> list(string subdominio, string idcontrato)
         {
             List<NovedadContrato> lstNovedadContrato = new List<NovedadContrato>();
 
@@ -223,6 +223,7 @@ namespace afiliacionwebapi.Services
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
                     cmdFB.CommandText = " P_AW_LISTNOVEDADCONTRATO ";
+                    cmdFB.Parameters.AddWithValue("IDCONTRATO", SqlDbType.VarChar).Value = idcontrato;
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 
@@ -232,9 +233,12 @@ namespace afiliacionwebapi.Services
                         infoNovedadContrato.idNovedadContrato= dbDR.GetInt32(0);
                         infoNovedadContrato.idNovedad = dbDR.GetInt32(1);
                         infoNovedadContrato.idContrato = dbDR.GetString(2);
+                       
                         infoNovedadContrato.fechanovedad = dbDR.GetDateTime(3);
-                        infoNovedadContrato.postfechadodia = dbDR.GetInt32(4);
-                        infoNovedadContrato.aplicada = dbDR.GetInt32(5);
+                        infoNovedadContrato.postfechadodia = dbDR.GetInt16(4);
+                        
+                        infoNovedadContrato.aplicada = dbDR.GetInt16(5);
+
                         infoNovedadContrato.fechan = dbDR.GetDateTime(6);
                         infoNovedadContrato.usuario = dbDR.GetString(7);
                         infoNovedadContrato.idcobrador = dbDR.GetString(8);
@@ -245,8 +249,8 @@ namespace afiliacionwebapi.Services
                         infoNovedadContrato.posiciony = dbDR.GetString(13);
                         infoNovedadContrato.titular = dbDR.GetString(14);
                         infoNovedadContrato.observaciones = dbDR.GetString(15);
-                        infoNovedadContrato.idalterna = dbDR.GetInt32(16);
                         
+                        infoNovedadContrato.idalterna = dbDR.GetInt16(16);
 
                         lstNovedadContrato.Add(infoNovedadContrato);
                     }

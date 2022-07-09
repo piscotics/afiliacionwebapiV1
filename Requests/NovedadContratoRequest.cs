@@ -9,11 +9,11 @@ namespace afiliacionwebapi.Models
 {
     public class NovedadContratoRequest : NovedadContrato
     {
-        public List<NovedadContrato> list(string subdominio)
+        public List<NovedadContrato> list(string subdominio, string idcontrato)
         {
             NovedadContratoService novedadContratoService = new NovedadContratoService();
             List<NovedadContrato> novedadesContrato = new List<NovedadContrato>();
-            novedadesContrato = novedadContratoService.list(subdominio);
+            novedadesContrato = novedadContratoService.list(subdominio, idcontrato);
             return novedadesContrato;
         } 
 

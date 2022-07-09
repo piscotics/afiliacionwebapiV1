@@ -17,12 +17,12 @@ namespace afiliacionwebapi.Controllers
     {
         [HttpGet]
         [Route("list")]
-        public IActionResult list([FromQuery] string subdominio)
+        public IActionResult list([FromQuery] string subdominio, string idcontrato)
         {
             if (subdominio == "") return BadRequest();
 
             NovedadContratoRequest novedadContratoRequest = new NovedadContratoRequest();
-            return Ok(novedadContratoRequest.list(subdominio));
+            return Ok(novedadContratoRequest.list(subdominio, idcontrato));
         }
 
         [HttpPost]

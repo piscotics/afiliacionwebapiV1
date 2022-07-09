@@ -42,7 +42,7 @@ namespace afiliacionwebapi.Connection
         {
             // Prueba Remoto AWS
            FbConnection cn = new FbConnection("User=SYSDBA;password=masterkey;DataSource=138.128.244.126;Database=138.128.244.126:" + database + ";Charset=NONE;Dialect=3;Max Pool Size=1024;");
-           //  FbConnection cn = new FbConnection("User=SYSDBA;password=masterkey;DataSource=localhost;Database=localhost:" + database + ";Charset=NONE;Dialect=3;Max Pool Size=1024;");
+          //   FbConnection cn = new FbConnection("User=SYSDBA;password=masterkey;DataSource=localhost;Database=localhost:" + database + ";Charset=NONE;Dialect=3;Max Pool Size=1024;");
 
             return cn;
         }
