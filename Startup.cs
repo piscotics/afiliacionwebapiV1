@@ -68,6 +68,8 @@ namespace afiliacionwebapi
                 
             });
 
+            app.UseHttpsRedirection();
+
             app.UseRouting();
 
             app.UseAuthorization();

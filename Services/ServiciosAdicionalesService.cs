@@ -73,7 +73,7 @@ namespace afiliacionwebapi.Services
             return infoServiciosAdicionales;
         }
 
-        public List<ServiciosAdicionales> list(string subdominio)
+        public List<ServiciosAdicionales> list(string subdominio, string tipoServicio)
         {
             List<ServiciosAdicionales> lstServiciosAdicionales = new List<ServiciosAdicionales>();
 
@@ -91,6 +91,7 @@ namespace afiliacionwebapi.Services
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
                     cmdFB.CommandText = " P_AW_LISTSERVICIOSADICIONALES ";
+                    cmdFB.Parameters.AddWithValue("TIPOSERVICIO", SqlDbType.Int).Value = tipoServicio;
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace afiliacionwebapi.Models
 {
-    public class SincronizarParametros
+    public class SincronizarRegistros
     {
         public string Codigo { get; set; }
         public string Resultado { get; set; }

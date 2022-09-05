@@ -7,7 +7,7 @@ namespace afiliacionwebapi.Models
 {
     public class SincronizarContratos
     {
-        public Int32 Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Resultado { get; set; }
        
         public string codRespuesta { get; set; }

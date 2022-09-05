@@ -37,7 +37,7 @@ namespace afiliacionwebapi.Services
 
                     foreach (DbDataRecord dbDR in drFB)
                     {
-                        infoSincronizar.Codigo = dbDR.GetInt32(0);
+                        infoSincronizar.Codigo = dbDR.GetString(0);
                         infoSincronizar.Resultado = dbDR.GetString(1);
                        
                     }

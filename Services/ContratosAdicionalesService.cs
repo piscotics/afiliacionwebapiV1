@@ -32,15 +32,16 @@ namespace afiliacionwebapi.Services
                     cmdFB = cnConnFB.CreateCommand();
                     cmdFB.CommandText = " P_AW_CREARCONTRATOSADICIONALES ";
                     //cmdFB.Parameters.AddWithValue("IDCA", SqlDbType.Int).Value = ContratosAdicionales.idca;
-                    cmdFB.Parameters.AddWithValue("IDCONTRATO", SqlDbType.Int).Value = ContratosAdicionales.idcontrato;
-                    cmdFB.Parameters.AddWithValue("IDSADICIONAL", SqlDbType.VarChar).Value = ContratosAdicionales.idsadicional;
-                    cmdFB.Parameters.AddWithValue("VALOR", SqlDbType.DateTime).Value = ContratosAdicionales.valor ;
-                    cmdFB.Parameters.AddWithValue("USUARIO", SqlDbType.Int).Value = ContratosAdicionales.usuario ;
-                    cmdFB.Parameters.AddWithValue("FECHA", SqlDbType.Int).Value = ContratosAdicionales.fecha ;
-                    cmdFB.Parameters.AddWithValue("IDPERSONA", SqlDbType.Int).Value = ContratosAdicionales.idpersona ;
-                    cmdFB.Parameters.AddWithValue("VALORANTERIOR", SqlDbType.DateTime).Value = ContratosAdicionales.valoranterior ;
-                    cmdFB.Parameters.AddWithValue("FECHARETIRO", SqlDbType.VarChar).Value = ContratosAdicionales.fecharetiro ;
+                    cmdFB.Parameters.AddWithValue("IDCONTRATO", SqlDbType.VarChar).Value = ContratosAdicionales.idcontrato;
+                    cmdFB.Parameters.AddWithValue("IDSADICIONAL", SqlDbType.Int).Value = ContratosAdicionales.idsadicional;
+                    cmdFB.Parameters.AddWithValue("VALOR", SqlDbType.Int).Value = ContratosAdicionales.valor ;
+                    cmdFB.Parameters.AddWithValue("USUARIO", SqlDbType.VarChar).Value = ContratosAdicionales.usuario ;
+                    cmdFB.Parameters.AddWithValue("FECHA", SqlDbType.DateTime).Value = ContratosAdicionales.fecha ;
+                    cmdFB.Parameters.AddWithValue("IDPERSONA", SqlDbType.VarChar).Value = ContratosAdicionales.idpersona ;
+                    cmdFB.Parameters.AddWithValue("VALORANTERIOR", SqlDbType.Int).Value = ContratosAdicionales.valoranterior ;
+                    cmdFB.Parameters.AddWithValue("FECHARETIRO", SqlDbType.DateTime).Value = ContratosAdicionales.fecharetiro ;
                     cmdFB.Parameters.AddWithValue("IDASESOR", SqlDbType.VarChar).Value = ContratosAdicionales.idasesor ;
+                    
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 
@@ -89,14 +90,14 @@ namespace afiliacionwebapi.Services
                     cmdFB.CommandText = " P_AW_UPDATECONTRATOSADICIONALES ";
 
                     cmdFB.Parameters.AddWithValue("IDCA", SqlDbType.Int).Value = ContratosAdicionales.idca;
-                    cmdFB.Parameters.AddWithValue("IDCONTRATO", SqlDbType.Int).Value = ContratosAdicionales.idcontrato;
-                    cmdFB.Parameters.AddWithValue("IDSADICIONAL", SqlDbType.VarChar).Value = ContratosAdicionales.idsadicional;
-                    cmdFB.Parameters.AddWithValue("VALOR", SqlDbType.DateTime).Value = ContratosAdicionales.valor ;
-                    cmdFB.Parameters.AddWithValue("USUARIO", SqlDbType.Int).Value = ContratosAdicionales.usuario ;
-                    cmdFB.Parameters.AddWithValue("FECHA", SqlDbType.Int).Value = ContratosAdicionales.fecha ;
-                    cmdFB.Parameters.AddWithValue("IDPERSONA", SqlDbType.Int).Value = ContratosAdicionales.idpersona ;
-                    cmdFB.Parameters.AddWithValue("VALORANTERIOR", SqlDbType.DateTime).Value = ContratosAdicionales.valoranterior ;
-                    cmdFB.Parameters.AddWithValue("FECHARETIRO", SqlDbType.VarChar).Value = ContratosAdicionales.fecharetiro ;
+                    cmdFB.Parameters.AddWithValue("IDCONTRATO", SqlDbType.VarChar).Value = ContratosAdicionales.idcontrato;
+                    cmdFB.Parameters.AddWithValue("IDSADICIONAL", SqlDbType.Int).Value = ContratosAdicionales.idsadicional;
+                    cmdFB.Parameters.AddWithValue("VALOR", SqlDbType.Int).Value = ContratosAdicionales.valor ;
+                    cmdFB.Parameters.AddWithValue("USUARIO", SqlDbType.VarChar).Value = ContratosAdicionales.usuario ;
+                    cmdFB.Parameters.AddWithValue("FECHA", SqlDbType.DateTime).Value = ContratosAdicionales.fecha ;
+                    cmdFB.Parameters.AddWithValue("IDPERSONA", SqlDbType.VarChar).Value = ContratosAdicionales.idpersona ;
+                    cmdFB.Parameters.AddWithValue("VALORANTERIOR", SqlDbType.Int).Value = ContratosAdicionales.valoranterior ;
+                    cmdFB.Parameters.AddWithValue("FECHARETIRO", SqlDbType.DateTime).Value = ContratosAdicionales.fecharetiro ;
                     cmdFB.Parameters.AddWithValue("IDASESOR", SqlDbType.VarChar).Value = ContratosAdicionales.idasesor ;
                     
                     cmdFB.CommandType = CommandType.StoredProcedure;
@@ -156,13 +157,21 @@ namespace afiliacionwebapi.Services
                         infoContratosAdicionales.idca = dbDR.GetInt32(0);
                         infoContratosAdicionales.idcontrato = dbDR.GetString(1);
                         infoContratosAdicionales.idsadicional = dbDR.GetInt32(2);
-                        infoContratosAdicionales.valor = dbDR.GetFloat(3);
-                        infoContratosAdicionales.usuario = dbDR.GetString(4);
-                        infoContratosAdicionales.fecha = dbDR.GetDateTime(5);
-                        infoContratosAdicionales.idpersona = dbDR.GetString(6);
-                        infoContratosAdicionales.valoranterior = dbDR.GetFloat(7);
-                        infoContratosAdicionales.fecharetiro = dbDR.GetDateTime(8);
-                        infoContratosAdicionales.idasesor = dbDR.GetString(9);
+                        infoContratosAdicionales.servicioadicional = dbDR.GetString(3);
+                        infoContratosAdicionales.valor = dbDR.GetInt32(4);
+                        infoContratosAdicionales.usuario = dbDR.GetString(5);
+                        infoContratosAdicionales.fecha = dbDR.GetDateTime(6);
+                        infoContratosAdicionales.idpersona = dbDR.GetString(7);
+                        infoContratosAdicionales.valoranterior = dbDR.GetFloat(8);
+                        if (dbDR["FECHARETIRO"] == DBNull.Value)
+                        {
+                            infoContratosAdicionales.fecharetiro    = null;
+                        }else{
+                            infoContratosAdicionales.fecharetiro    = dbDR.GetDateTime(8);
+                        }
+                        infoContratosAdicionales.idasesor = dbDR.GetString(10);
+                        infoContratosAdicionales.asesor = dbDR.GetString(11);
+                        infoContratosAdicionales.tipocobro = dbDR.GetInt16(12);
                        
                     }
                 }
@@ -186,7 +195,7 @@ namespace afiliacionwebapi.Services
             return infoContratosAdicionales;
         }
 
-        public List<ContratosAdicionales> list(string subdominio,string identificaciontitular, string idcontrato)
+        public List<ContratosAdicionales> list(string subdominio, string idcontrato)
         {
             List<ContratosAdicionales> lstContratosAdicionales = new List<ContratosAdicionales>();
 
@@ -204,7 +213,7 @@ namespace afiliacionwebapi.Services
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
                     cmdFB.CommandText = " P_AW_LISTCONTRATOADICIONALES ";
-                     cmdFB.Parameters.AddWithValue("TITULAR", SqlDbType.VarChar).Value = identificaciontitular;
+                   //  cmdFB.Parameters.AddWithValue("TITULAR", SqlDbType.VarChar).Value = identificaciontitular;
                     cmdFB.Parameters.AddWithValue("CONTRATO", SqlDbType.VarChar).Value = idcontrato;
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
@@ -215,13 +224,21 @@ namespace afiliacionwebapi.Services
                         contratosAdicionales.idca = dbDR.GetInt32(0);
                         contratosAdicionales.idcontrato = dbDR.GetString(1);
                         contratosAdicionales.idsadicional = dbDR.GetInt32(2);
-                        contratosAdicionales.valor = dbDR.GetFloat(3);
-                        contratosAdicionales.usuario = dbDR.GetString(4);
-                        contratosAdicionales.fecha = dbDR.GetDateTime(5);
-                        contratosAdicionales.idpersona = dbDR.GetString(6);
-                        contratosAdicionales.valoranterior = dbDR.GetFloat(7);
-                        contratosAdicionales.fecharetiro = dbDR.GetDateTime(8);
-                        contratosAdicionales.idasesor = dbDR.GetString(9);
+                        contratosAdicionales.servicioadicional = dbDR.GetString(3);
+                        contratosAdicionales.valor = dbDR.GetInt32(4);
+                        contratosAdicionales.usuario = dbDR.GetString(5);
+                        contratosAdicionales.fecha = dbDR.GetDateTime(6);
+                        contratosAdicionales.idpersona = dbDR.GetString(7);
+                        contratosAdicionales.valoranterior = dbDR.GetFloat(8);
+                        if (dbDR["FECHARETIRO"] == DBNull.Value)
+                        {
+                            contratosAdicionales.fecharetiro    = null;
+                        }else{
+                            contratosAdicionales.fecharetiro    = dbDR.GetDateTime(9);
+                        }
+                        contratosAdicionales.idasesor = dbDR.GetString(10);
+                        contratosAdicionales.asesor = dbDR.GetString(11);
+                        contratosAdicionales.tipocobro = dbDR.GetInt16(12);
                         lstContratosAdicionales.Add(contratosAdicionales);
                     }
                 }

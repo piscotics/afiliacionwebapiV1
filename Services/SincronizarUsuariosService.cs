@@ -9,14 +9,14 @@ using System.Web;
 
 namespace afiliacionwebapi.Services
 {
-    public class SincronizarContratosService
+    public class SincronizarUsuariosService
     {
 
         string rutaDBWeb = "";
         
-        public SincronizarContratos get(string subdominio)
+        public SincronizarUsuarios get(string subdominio)
         {
-            SincronizarContratos infoSincronizar = new SincronizarContratos();
+            SincronizarUsuarios infoSincronizar = new SincronizarUsuarios();
 
             // Siempre entramos a verificar que el subdominio enviado exista
             rutaDBWeb = PasarelaWebService.validarSubdominio(subdominio);
@@ -31,7 +31,7 @@ namespace afiliacionwebapi.Services
                     cnConnFB = Connection.Conexion.getInstance().ConexionDBWeb(rutaDBWeb);
                     cnConnFB.Open();
                     cmdFB = cnConnFB.CreateCommand();
-                    cmdFB.CommandText = " P_AW_SINCRONIZACONTRATOS ";
+                    cmdFB.CommandText = " P_AW_SINCRONIZARUSUARIOS ";
                     cmdFB.CommandType = CommandType.StoredProcedure;
                     drFB = cmdFB.ExecuteReader();
 

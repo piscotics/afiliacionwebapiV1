@@ -9,11 +9,11 @@ namespace afiliacionwebapi.Models
 {
     public class ContratosAdicionalesRequest : ContratosAdicionales
     {
-        public List<ContratosAdicionales> list(string subdominio,string identificaciontitular, string idcontrato)
+        public List<ContratosAdicionales> list(string subdominio, string idcontrato)
         {
             ContratosAdicionalesService contratosAdicionalesService = new ContratosAdicionalesService();
             List<ContratosAdicionales> contratosAdicionaless = new List<ContratosAdicionales>();
-            contratosAdicionaless = contratosAdicionalesService.list(subdominio,identificaciontitular,idcontrato );
+            contratosAdicionaless = contratosAdicionalesService.list(subdominio,idcontrato );
             return contratosAdicionaless;
         }
 
